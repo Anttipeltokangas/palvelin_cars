@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
+require('dotenv').config(); // 🔑 lataa .env-tiedoston
 
 const app = express();
 
@@ -18,12 +19,12 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // --- MongoDB yhteys ---
-const uri = 'mongodb+srv://Antti:joo12345678@cluster0.m7d9gxb.mongodb.net/carsDb?retryWrites=true&w=majority';
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Tietokantayhteys avattu MongoDB Atlas carsDb'))
   .catch(err => console.error('MongoDB-yhteysvirhe:', err));
 
 const db = mongoose.connection;
+
 
 // --- Mongoose skeema ---
 const carSchema = new mongoose.Schema({
