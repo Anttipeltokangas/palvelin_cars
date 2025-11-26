@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>New Car</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Lisää uusi auto</h1>
+
+    <form id="addCarForm">
+        <label for="brand">Merkki</label>
+        <input type="text" id="brand" placeholder="Auton merkki">
+
+        <label for="model">Malli</label>
+        <input type="text" id="model" placeholder="Auton malli">
+
+        <label for="year">Vuosimalli</label>
+        <input type="number" id="year" placeholder="2020">
+
+        <label for="fuel">Polttoaine</label>
+        <input type="text" id="fuel" placeholder="Bensa/Diesel/Sähkö">
+
+        <label for="electric">Sähköauto</label>
+        <input type="checkbox" id="electric">
+
+        <button type="button" onclick="addCar()">Lisää auto</button>
+    </form>
+
+    <h2>Autolista</h2>
+    <div id="demo"></div>
+
+    <script src="front.js"></script>
+</body>
+</html>
