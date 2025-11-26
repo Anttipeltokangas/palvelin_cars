@@ -1,0 +1,34 @@
+{
+  "name": "palvelin_cars",
+  "version": "1.0.0",
+  "description": "Palvelinohjelmointikurssin Cars-esimerkki",
+  "main": "server_cars.js",
+  "scripts": {
+    "start": "node server_cars.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anttipeltokangas/palvelin_cars.git"
+  },
+  "keywords": [
+    "express",
+    "mongodb",
+    "mongoose",
+    "cars"
+  ],
+  "author": "Antti Peltokangas",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Anttipeltokangas/palvelin_cars/issues"
+  },
+  "homepage": "https://github.com/Anttipeltokangas/palvelin_cars#readme",
+  "dependencies": {
+    "body-parser": "^2.2.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mongodb": "^6.20.0",
+    "mongoose": "^6.13.8"
+  }
+}
